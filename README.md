@@ -1,12 +1,6 @@
 # DataAnalytics-Assessment
 This repository contains my SQL solutions and analysis for the Cowrywise Data Analytics Assessment. The queries address key business questions around customer transaction frequency, plan preferences, and customer lifetime value. 
 
-"""
-# Cowrywise SQL Analytics Assessment
-
-This document provides a summary of my thought process, SQL approaches, and the challenges I encountered while working on the Cowrywise SQL assessment. Each question was approached with a focus on clarity, performance, and practical business value.
-
----
 
 ## Question-by-Question Breakdown
 
@@ -67,11 +61,6 @@ The overlap or absence of flags (i.e., neither regular nor fund) could make clas
 4. Applied the formula:
 
 CLV = (total_transactions / tenure_months) * 12 * avg_profit_per_transaction
-
-yaml
-Always show details
-
-Copy
 
 **Challenge:**  
 Some users had zero-month tenures (i.e., signed up this month), which led to potential divide-by-zero issues. I added safeguards using `NULLIF` to avoid crashes. I also used average profit derived from total confirmed amounts where needed.
